@@ -1,3 +1,6 @@
+import FadeIn from "@/components/FadeIn";
+
+
 const experiences = [
   {
     company: "TU COMPRA S.A.S",
@@ -52,46 +55,47 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24">
-      <h2 className="text-4xl font-bold mb-12">
-        Professional Experience
-      </h2>
+    <FadeIn>
+      <section id="experience" className="py-24">
+        <h2 className="text-4xl font-bold mb-12">
+          Professional Experience
+        </h2>
 
-      <div className="space-y-8">
-        {experiences.map((exp) => (
-          <div
-            key={exp.company}
-            className="border border-gray-800 rounded-2xl p-8 hover:border-gray-600 transition-all"
-          >
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
-              <div>
-                <h3 className="text-2xl font-semibold">
-                  {exp.company}
-                </h3>
+        <div className="space-y-8">
+          {experiences.map((exp) => (
+            <div
+              key={exp.company}
+              className="border border-gray-800 rounded-2xl p-8 hover:border-gray-600 transition-all"
+            >
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
+                <div>
+                  <h3 className="text-2xl font-semibold">
+                    {exp.company}
+                  </h3>
 
-                <p className="text-blue-400">
-                  {exp.role}
-                </p>
+                  <p className="text-blue-400">
+                    {exp.role}
+                  </p>
+                </div>
+
+                <span className="text-gray-400 mt-2 md:mt-0">
+                  {exp.period}
+                </span>
               </div>
 
-              <span className="text-gray-400 mt-2 md:mt-0">
-                {exp.period}
-              </span>
-            </div>
+              <ul className="space-y-2 text-gray-300 mb-6">
+                {exp.achievements.map((achievement) => (
+                  <li key={achievement}>
+                    • {achievement}
+                  </li>
+                ))}
+              </ul>
 
-            <ul className="space-y-2 text-gray-300 mb-6">
-              {exp.achievements.map((achievement) => (
-                <li key={achievement}>
-                  • {achievement}
-                </li>
-              ))}
-            </ul>
-
-            <div className="flex flex-wrap gap-2">
-              {exp.stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="
+              <div className="flex flex-wrap gap-2">
+                {exp.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="
                             px-3 py-1
                             text-sm
                             rounded-full
@@ -100,14 +104,15 @@ export default function Experience() {
                             border-gray-800
                             text-gray-300
                             "
-                >
-                  {tech}
-                </span>
-              ))}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </FadeIn>
   );
 }

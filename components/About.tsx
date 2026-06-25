@@ -1,5 +1,10 @@
+import FadeIn from "@/components/FadeIn";
+
+
+
 export default function About() {
   return (
+    <FadeIn>
     <section id="about">
       <h2 className="text-4xl font-bold mb-8">
         About
@@ -18,5 +23,6 @@ export default function About() {
         </p>
       </div>
     </section>
+     </FadeIn>
   );
 }

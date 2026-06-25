@@ -1,4 +1,17 @@
 const projects = [
+
+  {
+    title: "Real-Time Automation Platform",
+    description:
+      "Desktop application built with Electron and Node.js for real-time monitoring, automated workflows and multi-account management.",
+    stack: [
+      "Electron",
+      "Node.js",
+      "Playwright",
+      "Axios",
+      "REST APIs",
+    ],
+  },
   {
     title: "Payment Gateway Integration",
     description:
@@ -17,6 +30,8 @@ const projects = [
       "Commercial and administrative mobile applications.",
     stack: ["React Native", "REST APIs"],
   },
+
+
 ];
 
 export default function Projects() {

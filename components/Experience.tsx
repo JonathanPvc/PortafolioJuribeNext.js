@@ -91,7 +91,15 @@ export default function Experience() {
               {exp.stack.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 text-sm rounded-full border border-gray-700"
+                  className="
+                            px-3 py-1
+                            text-sm
+                            rounded-full
+                            bg-gray-900
+                            border
+                            border-gray-800
+                            text-gray-300
+                            "
                 >
                   {tech}
                 </span>

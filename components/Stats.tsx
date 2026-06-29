@@ -6,7 +6,7 @@ const stats = [
   { value: 4, suffix: "+", label: "Years of Experience" },
   { value: 20, suffix: "+", label: "Applications Delivered" },
   { value: 10, suffix: "+", label: "Technologies Mastered" },
-  { value: 3, suffix: "", label: "Countries Served" },
+  { value: 1, suffix: "", label: "Countries Served" },
 ];
 
 function useCountUp(target: number, duration = 1500, active: boolean) {

@@ -5,7 +5,6 @@ import { FaGithub } from "react-icons/fa";
 import { useLanguage } from "@/context/LanguageContext";
 import { t } from "@/lib/translations";
 
-// ✅ Cuando tengas tus páginas de clientes listas, agrégalas aquí:
 const clientProjects: {
   title: { es: string; en: string };
   desc:  { es: string; en: string };
@@ -21,6 +20,14 @@ const clientProjects: {
     type: "client",
     github: null,
     demo: "https://azucarmorena.vercel.app",
+  },
+  {
+    title: { es: "Iluminaciones Exito", en: "Exito Lighting" },
+    desc:  { es: "Landing page para empresa de iluminación en Cali con galería, panel admin y Cloudinary.", en: "Landing page for a lighting company in Cali with gallery, admin panel and Cloudinary." },
+    stack: ["Next.js", "NestJS", "PostgreSQL", "Cloudinary"],
+    type: "client",
+    github: null,
+    demo: "https://iluminaciones-exito-fontend.vercel.app/",
   },
 ];
 
@@ -55,18 +62,33 @@ export default function Projects() {
                   <span className={`text-xs border px-2.5 py-1 rounded-full ${project.type === "client" ? "text-emerald-400 border-emerald-400/30 bg-emerald-400/5" : "text-blue-400 border-blue-400/30 bg-blue-400/5"}`}>
                     {badge}
                   </span>
-                  <div className="flex gap-3">
-                    {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition"><FaGithub size={16} /></a>}
-                    {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition"><ExternalLink size={16} /></a>}
-                  </div>
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition">
+                      <FaGithub size={16} />
+                    </a>
+                  )}
                 </div>
+
                 <h3 className="text-xl font-semibold mb-3">{project.title[lang]}</h3>
                 <p className="text-gray-400 mb-6 leading-7 flex-1">{project.desc[lang]}</p>
-                <div className="flex flex-wrap gap-2">
+
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.stack.map((tech) => (
                     <span key={tech} className="text-sm border border-gray-700 px-2.5 py-1 rounded-lg text-gray-300">{tech}</span>
                   ))}
                 </div>
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto flex items-center justify-center gap-2 text-sm font-medium border border-gray-700 hover:border-gray-500 hover:bg-gray-800/50 transition px-4 py-2.5 rounded-xl text-white"
+                  >
+                    {lang === "es" ? "Ver proyecto" : "View project"}
+                    <ExternalLink size={14} />
+                  </a>
+                )}
               </div>
             );
           })}

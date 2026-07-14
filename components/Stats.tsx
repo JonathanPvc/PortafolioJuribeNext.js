@@ -7,7 +7,7 @@ const statsData = [
   { value: 4,  suffix: "+", key: "exp"       as const },
   { value: 20, suffix: "+", key: "apps"      as const },
   { value: 10, suffix: "+", key: "techs"     as const },
-  { value: 3,  suffix: "",  key: "countries" as const },
+  { value: 1,  suffix: "",  key: "countries" as const },
 ];
 
 function useCountUp(target: number, duration = 1200, active: boolean) {

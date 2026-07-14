@@ -6,10 +6,10 @@ export default function ProfileImage() {
   return (
     <div className="relative">
       <Image
-        src="/profile.jpg"
+        src="/profile.png"
         alt="Jonathan Uribe"
-        width={300}
-        height={300}
+        width={500}
+        height={500}
         className="
           rounded-3xl
           border

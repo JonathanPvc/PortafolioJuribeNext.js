@@ -15,7 +15,7 @@ const clientProjects: {
 }[] = [
   {
     title: { es: "Pasteleria Azúcar Morena", en: "Azúcar Morena Bakery" },
-    desc:  { es: "Landing page para panadería artesanal en Cali con galería, panel admin y Cloudinary.", en: "Landing page for an artisan bakery in Cali with gallery, admin panel and Cloudinary." },
+    desc:  { es: "Landing page para panadería artesanal en Cali con galería, panel administrativo y Cloudinary.", en: "Landing page for an artisan bakery in Cali with gallery, admin panel and Cloudinary." },
     stack: ["Next.js", "NestJS", "PostgreSQL", "Cloudinary"],
     type: "client",
     github: null,
@@ -23,11 +23,11 @@ const clientProjects: {
   },
   {
     title: { es: "Iluminaciones Exito", en: "Exito Lighting" },
-    desc:  { es: "Landing page para empresa de iluminación en Cali con galería, panel admin y Cloudinary.", en: "Landing page for a lighting company in Cali with gallery, admin panel and Cloudinary." },
+    desc:  { es: "Landing page para empresa de iluminación en Cali con galería, panel administrativo, dominio web y Cloudinary.", en: "Landing page for a lighting company in Cali with gallery, admin panel and Cloudinary." },
     stack: ["Next.js", "NestJS", "PostgreSQL", "Cloudinary"],
     type: "client",
     github: null,
-    demo: "https://iluminaciones-exito-fontend.vercel.app/",
+    demo: "https://www.iluminacionesexito.com/",
   },
 ];
 

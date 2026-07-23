@@ -19,7 +19,7 @@ const clientProjects: {
     stack: ["Next.js", "NestJS", "PostgreSQL", "Cloudinary"],
     type: "client",
     github: null,
-    demo: "https://azucarmorena.vercel.app",
+    demo: "https://www.azucarmorenacali.com/",
   },
   {
     title: { es: "Iluminaciones Exito", en: "Exito Lighting" },
